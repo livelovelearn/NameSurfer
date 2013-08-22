@@ -19,8 +19,12 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
  */
 	public void init() {
 	    // You fill this in, along with any helper methods //
-		JButton button1 = new JButton ("Name");
+		JButton button1 = new JButton ("Graph");
 		add(button1, NORTH);
+		JButton button2 = new JButton ("Clear");
+		add(button2, NORTH);
+		addActionListeners();
+		
 	}
 
 /* Method: actionPerformed(e) */
@@ -31,5 +35,10 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
  */
 	public void actionPerformed(ActionEvent e) {
 		// You fill this in //
+		String cmd = e.getActionCommand();
+		if (cmd.equals("Graph"))
+			println("graph");
+		if (cmd.equals("Clear"))
+			println("clear");
 	}
 }
