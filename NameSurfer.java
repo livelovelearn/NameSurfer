@@ -22,7 +22,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
-		add(new JLabel(),NORTH);
+		add(new JTextField("Hi", 10),NORTH);
 		addActionListeners();
 		
 	}
