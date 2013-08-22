@@ -40,7 +40,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		String cmd = e.getActionCommand();
 		String name = nameField.getText();
 		if (cmd.equals("Graph"))
-			println("Graph '" + name);
+			println("Name you entered " + name);
 		if (cmd.equals("Clear"))
 			println("clear");
 	}
