@@ -20,9 +20,11 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	public void init() {
 	    // You fill this in, along with any helper methods //
 		
+		add(new JLabel("Name"), NORTH);
+		add(new JTextField("name", 10), NORTH);
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
-		add(new JTextField("Hi", 10),NORTH);
+		
 		addActionListeners();
 		
 	}
