@@ -21,7 +21,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	    // You fill this in, along with any helper methods //
 		
 		add(new JLabel("Name"), NORTH);
-		add(new JTextField(20), NORTH);
+		JTextField name = new JTextField(20);
+		add(name, NORTH);
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
 		
@@ -41,6 +42,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		if (cmd.equals("Graph"))
 			println("graph");
 		if (cmd.equals("Clear"))
-			removeAll();
+			println("clear");
 	}
 }
