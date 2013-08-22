@@ -1,5 +1,6 @@
 /*
  * File: NameSurfer.java
+
  * ---------------------
  * When it is finished, this program will implements the viewer for
  * the baby-name database described in the assignment handout.
@@ -9,7 +10,7 @@ import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NameSurfer extends Program implements NameSurferConstants {
+public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
 /* Method: init() */
 /**
