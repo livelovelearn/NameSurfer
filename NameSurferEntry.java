@@ -20,6 +20,26 @@ public class NameSurferEntry implements NameSurferConstants {
  */
 	public NameSurferEntry(String line) {
 		// You fill this in //
+		int current=0;
+		rank = new int[11];
+		for (int i=0;i<line.length();i++){
+			if (line.charAt(i)!= ' '){
+				name += line.charAt(i);
+				current =i;
+			}
+			else break;
+		}
+		for (int i=0;i<11;i++){
+			for(int j=current+1;j<line.length();j++){
+				if (line.charAt(j)!= ' '){
+					String srank = null;
+					srank+= line.charAt(j);
+					rank[i]=Integer.parseInt(srank);
+					current = j;
+					}
+				else break;
+			}
+		}
 	}
 
 /* Method: getName() */
@@ -28,7 +48,7 @@ public class NameSurferEntry implements NameSurferConstants {
  */
 	public String getName() {
 		// You need to turn this stub into a real implementation //
-		return null;
+		return name;
 	}
 
 /* Method: getRank(decade) */
@@ -41,7 +61,8 @@ public class NameSurferEntry implements NameSurferConstants {
  */
 	public int getRank(int decade) {
 		// You need to turn this stub into a real implementation //
-		return 0;
+		int a = (decade-START_DECADE)/10;
+		return rank[a];
 	}
 
 /* Method: toString() */
@@ -51,7 +72,9 @@ public class NameSurferEntry implements NameSurferConstants {
  */
 	public String toString() {
 		// You need to turn this stub into a real implementation //
-		return "";
+		return (name + " ["+ rank[0] +" "+ rank[1] +" "+ rank[2] +" "+ rank[3] +" "+ rank[4] +" "+ rank[5] +" "+ rank[6] +" "+ rank[7] +" "+ rank[8] +" "+ rank[9] +" "+ rank[10] +" ");
 	}
+	private String name = null;
+	private int[] rank; 
 }
 
