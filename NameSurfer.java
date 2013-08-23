@@ -27,7 +27,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		add(new JButton ("Clear"), NORTH);
 		
 		addActionListeners();
-		
+		NameSurferDataBase NSD = new NameSurferDataBase("names-data.txt");
+		NSE = NSD.findEntry(name);
 		
 		
 	}
@@ -44,8 +45,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		String cmd = e.getActionCommand();
 		String name = nameField.getText();
 		
-		NameSurferDataBase NSD = new NameSurferDataBase("names-data.txt");
-		NSE = NSD.findEntry(name);
+		
+		
 		if (cmd.equals("Graph"))
 			println("Name you entered " + name + NSE.getRank(0));
 		if (cmd.equals("Clear"))
