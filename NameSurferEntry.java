@@ -17,6 +17,7 @@ public class NameSurferEntry implements NameSurferConstants {
  * in the data file.  Each line begins with the name, which is
  * followed by integers giving the rank of that name for each
  * decade.
+ * 
  */
 	public NameSurferEntry(String line) {
 		// You fill this in //
@@ -64,7 +65,7 @@ public class NameSurferEntry implements NameSurferConstants {
 		int a = (decade-START_DECADE)/10;
 		return rank[a];
 	}
-
+	 
 /* Method: toString() */
 /**
  * Returns a string that makes it easy to see the value of a
