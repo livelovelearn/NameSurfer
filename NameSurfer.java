@@ -28,7 +28,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		addActionListeners();
 		NameSurferDataBase NSD = new NameSurferDataBase("names-data.txt");
-		NSE = NSD.findEntry(name);
+		
 		
 		
 	}
@@ -44,7 +44,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		String cmd = e.getActionCommand();
 		String name = nameField.getText();
-		
+		NSE = NSD.findEntry(name);
 		
 		
 		if (cmd.equals("Graph"))
