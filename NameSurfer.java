@@ -17,6 +17,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
  * This method has the responsibility for reading in the data base
  * and initializing the interactors at the top of the window.
  */
+	
 	public void init() {
 	    // You fill this in, along with any helper methods //
 		
@@ -26,7 +27,9 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		add(new JButton ("Clear"), NORTH);
 		
 		addActionListeners();
-		
+		String line = "andy 1 2 3 4 5 6 7 8 9 10 11";
+		NameSurferEntry entry = new NameSurferEntry(line);
+		println(entry.toString());
 	}
 
 /* Method: actionPerformed(e) */
