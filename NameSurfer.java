@@ -27,9 +27,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		add(new JButton ("Clear"), NORTH);
 		
 		addActionListeners();
-		String line = "andy 1 2 3 4 5 6 7 8 9 10 11";
-		NameSurferEntry entry = new NameSurferEntry(line);
-		println(entry.toString());
+		
 	}
 
 /* Method: actionPerformed(e) */
@@ -40,6 +38,10 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
  */
 	public void actionPerformed(ActionEvent e) {
 		// You fill this in //
+		String line = "andy 1 2 3 4 5 6 7 8 9 10 11";
+		NameSurferEntry entry = new NameSurferEntry(line);
+		println(entry.toString());
+		
 		String cmd = e.getActionCommand();
 		String name = nameField.getText();
 		if (cmd.equals("Graph"))
