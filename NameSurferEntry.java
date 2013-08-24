@@ -29,8 +29,9 @@ public class NameSurferEntry implements NameSurferConstants {
 				name = line.substring(0, i);
 				break;
 			}
+			}
 			*/
-		}
+		
 		
 		/*for (int i = 0; i < 11; i++) {
 			String srank = null;
