@@ -50,7 +50,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		
 		if (cmd.equals("Graph"))
-			println("Name you entered " + name + NSE.toString());
+			println("Name you entered " + NSE.toString());
 		if (cmd.equals("Clear"))
 			println("clear");
 	}
