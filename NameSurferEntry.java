@@ -22,12 +22,14 @@ public class NameSurferEntry implements NameSurferConstants {
 		// You fill this in //
 		int current =0;
 		rank = new int[11];
-		for (int i = 0; i < line.length(); i++) {
+		name ="here2";
+		/*for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == 'b') {
 				current = i;
 				name = line.substring(0, i);
 				break;
 			}
+			*/
 		}
 		
 		/*for (int i = 0; i < 11; i++) {
