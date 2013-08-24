@@ -54,7 +54,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 		// You need to turn this stub into a real implementation //
 		
 		for (int i=0; i< pool.size();i++){
-			if (pool.get(i).getName().equals(name))//case 
+			if (pool.get(i).getName().equals(name))//case insensitive
 				return pool.get(i);
 		}
 		return null;
