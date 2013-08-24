@@ -57,6 +57,9 @@ public class NameSurferGraph extends GCanvas
 		// You fill this in //
 		GLabel wordlabel = new GLabel("start", 100, 100);
 		add (wordlabel);
+		GLine line1 = new GLine(0,0, 0, APPLICATION_WIDTH);
+		add(line1);
+		
 	}
 	
 	
