@@ -51,8 +51,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 * the name does not appear in the database, this method returns null.
 	 */
 	public NameSurferEntry findEntry(String name) {
-		// You need to turn this stub into a real implementation //
-		
+	
 		for (int i=0; i< pool.size();i++){
 			if (pool.get(i).getName().toUpperCase().equals(name.toUpperCase()))
 				return pool.get(i);
