@@ -62,8 +62,9 @@ public class NameSurferGraph extends GCanvas
 	
 	private void addLines(){
 		GLine line1 = new GLine(0,0, 0, APPLICATION_HEIGHT);
-		GLine line1 = new GLine(APPLICATION_WIDTH/10,0, APPLICATION_WIDTH/10, APPLICATION_HEIGHT);
+		GLine line2 = new GLine(APPLICATION_WIDTH/10,0, APPLICATION_WIDTH/10, APPLICATION_HEIGHT);
 		add(line1);
+		add(line2);
 	}
 	
 	/* Implementation of the ComponentListener interface */
