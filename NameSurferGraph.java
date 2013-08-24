@@ -67,8 +67,8 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		line[12] = new GLine(0, GRAPH_MARGIN_SIZE, APPLICATION_WIDTH,
 				GRAPH_MARGIN_SIZE);
 		add(line[12]);
-		line[13] = new GLine(0, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE,
-				APPLICATION_WIDTH, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE);
+		line[13] = new GLine(0, APPLICATION_HEIGHT,
+				APPLICATION_WIDTH, APPLICATION_HEIGHT);
 		add(line[13]);
 	}
 
