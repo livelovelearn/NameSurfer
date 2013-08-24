@@ -49,7 +49,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 
 		}
 		if (cmd.equals("Clear"))
-			graph.update();
+			graph.clear();
 	}
 
 	private JTextField nameField = new JTextField(20);
