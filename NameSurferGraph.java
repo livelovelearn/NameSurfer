@@ -60,8 +60,8 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		GLine[] line = new GLine[11];
 		for (int i = 0; i < 11; i++) {
 
-			line[i] = new GLine(APPLICATION_WIDTH / 10 * i, 0,
-					APPLICATION_WIDTH / 10 * i, APPLICATION_HEIGHT);
+			line[i] = new GLine(APPLICATION_WIDTH / 11 * i, 0,
+					APPLICATION_WIDTH / 11 * i, APPLICATION_HEIGHT);
 			add(line[i]);
 		}
 	}
