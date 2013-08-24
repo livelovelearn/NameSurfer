@@ -30,8 +30,7 @@ public class NameSurferGraph extends GCanvas
 	*/
 	public void clear() {
 		removeAll();
-		GLabel wordlabel = new GLabel("start", 100, 100);
-		add (wordlabel);
+		
 		// You fill this in //
 	}
 	
@@ -56,6 +55,8 @@ public class NameSurferGraph extends GCanvas
 	*/
 	public void update() {
 		// You fill this in //
+		GLabel wordlabel = new GLabel("start", 100, 100);
+		add (wordlabel);
 	}
 	
 	
