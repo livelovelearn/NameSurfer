@@ -82,7 +82,7 @@ public class NameSurferEntry implements NameSurferConstants {
 				+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + " ");
 	}*/
 
-	private String name = null;
+	public String name = null;
 	private int[] rank;
 	
 }
