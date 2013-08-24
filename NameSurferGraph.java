@@ -40,8 +40,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * entry; the graph is drawn by calling update.
 	 */
 	public void addEntry(NameSurferEntry entry) {
-		GLabel wordlabel = new GLabel("start", 100, 100);
-		add(wordlabel);
+		
 	}
 
 	/**
@@ -60,7 +59,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		GLine[] line = new GLine[13];
 		for (int i = 0; i < 11; i++) {
 
-			line[i] = new GLine(APPLICATION_WIDTH / 11 * i, 0,
+			line[i] = new GLine(getWidth()/ 11 * i, 0,
 					APPLICATION_WIDTH / 11 * i, APPLICATION_HEIGHT);
 			add(line[i]);
 		}
