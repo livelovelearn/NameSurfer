@@ -29,7 +29,9 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		add(new JButton ("Clear"), NORTH);
 		graph = new NameSurferGraph();
 		add(graph);
+		graph.clear();
 		addActionListeners();
+		
 	}
 
 /* Method: actionPerformed(e) */
@@ -39,7 +41,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
-		graph.clear();
+		
 		String cmd = e.getActionCommand();
 		NSE = NSD.findEntry(nameField.getText());
 		if (cmd.equals("Graph"))
