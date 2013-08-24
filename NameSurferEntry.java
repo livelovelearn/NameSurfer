@@ -52,10 +52,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	/**
 	 * Returns the name associated with this entry.
 	 */
-	public String getName() {
-		// You need to turn this stub into a real implementation //
-		return "here4";
-	}
+	
 
 	/* Method: getRank(decade) */
 	/**
@@ -75,6 +72,10 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * Returns a string that makes it easy to see the value of a
 	 * NameSurferEntry.
 	 */
+	public String getName() {
+		// You need to turn this stub into a real implementation //
+		return "here4";
+	}
 	public String toString() {
 		// You need to turn this stub into a real implementation //
 		return "here3";
