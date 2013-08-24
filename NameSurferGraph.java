@@ -69,6 +69,13 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		add(line[11]);
 		line[12] = new GLine(0, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE, APPLICATION_WIDTH, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE);
 		add(line[12]);
+		
+		GLabel[] label = new GLabel[11];
+		for (int i = 0; i < 11; i++) {
+			label[i] = new GLabel("1900+i*10", 0, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE);
+			
+			add(line[i]);
+		}
 	}
 
 	/* Implementation of the ComponentListener interface */
