@@ -10,7 +10,7 @@ import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NameSurfer extends Program implements NameSurferConstants {
+public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
 /* Method: init() */
 /**
@@ -20,6 +20,9 @@ public class NameSurfer extends Program implements NameSurferConstants {
 	
 	public void init() {
 	    // You fill this in, along with any helper methods //
+		NSD = new NameSurferDataBase("names-data.txt");
+		NSE = NSD.findEntry(nameField.getText());
+		
 		
 		add(new JLabel("Name"), NORTH);
 		add(nameField, NORTH);
@@ -44,8 +47,6 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		
 		String cmd = e.getActionCommand();
 		String name = nameField.getText();
-		NameSurferDataBase NSD = new NameSurferDataBase("names-data.txt");
-		NSE = NSD.findEntry(name);
 		
 		
 		if (cmd.equals("Graph"))
@@ -54,6 +55,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 			println("clear");
 	}
 	private JTextField nameField = new JTextField(20);
+	private NameSurferDataBase NSD;
 	private NameSurferEntry NSE;
 
 
