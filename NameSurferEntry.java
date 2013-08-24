@@ -23,7 +23,7 @@ public class NameSurferEntry implements NameSurferConstants {
 		int current =0;
 		rank = new int[11];
 		for (int i = 0; i < line.length(); i++) {
-			if (line.charAt(i) == ' ') {
+			if (line.charAt(i) == 'b') {
 				current = i;
 				name = line.substring(0, i);
 				break;
