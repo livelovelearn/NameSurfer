@@ -54,8 +54,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public void update() {
 		removeAll();
 		addLines();
-		add(name);
-	}
+		}
 
 	private void addLines() {
 		GLine[] line = new GLine[13];
