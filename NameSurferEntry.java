@@ -32,7 +32,7 @@ public class NameSurferEntry implements NameSurferConstants {
 
 		for (int i = 0; i < 11; i++) {
 			String srank = "";
-			System.out.println("line position" + current);
+			System.out.println("line position1" + current);
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
 					srank += line.charAt(j);
