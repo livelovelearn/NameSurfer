@@ -41,6 +41,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public void addEntry(NameSurferEntry entry) {
 		
 		GLabel name = new GLabel(entry.getName(), 100,100);
+		add(name);
 		
 		
 	}
