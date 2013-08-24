@@ -51,10 +51,11 @@ public class NameSurferDataBase implements NameSurferConstants {
 	 */
 	public NameSurferEntry findEntry(String name) {
 		// You need to turn this stub into a real implementation //
-		pool = new ArrayList<NameSurferEntry>();
-		for (int i=0; i< pool.size();i++)
+		
+		for (int i=0; i< pool.size();i++){
 			if (pool.get(i).getName().equals(name))//case 
 				return pool.get(i);
+		}
 		return null;
 	}
 
@@ -71,5 +72,5 @@ public class NameSurferDataBase implements NameSurferConstants {
 		}
 		return rd;
 	}
-	ArrayList<NameSurferEntry> pool;
+	ArrayList<NameSurferEntry> pool = new ArrayList<NameSurferEntry>();
 }
