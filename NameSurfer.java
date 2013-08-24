@@ -20,8 +20,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	
 	public void init() {
 	    // You fill this in, along with any helper methods //
-		//NSD = new NameSurferDataBase("names-data.txt");
-		//NSE = NSD.findEntry(nameField.getText());
+		NSD = new NameSurferDataBase("names-data.txt");
+		NSE = NSD.findEntry(nameField.getText());
 		
 		
 		add(new JLabel("Name"), NORTH);
@@ -50,7 +50,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		
 		if (cmd.equals("Graph"))
-			println("Name you entered " + name);// + NSE.getRank(0));
+			println("Name you entered " + name) + NSE.getRank(0));
 		if (cmd.equals("Clear"))
 			println("clear");
 	}
