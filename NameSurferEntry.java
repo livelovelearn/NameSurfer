@@ -54,7 +54,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public String getName() {
 		// You need to turn this stub into a real implementation //
-		return "getname";
+		return null;
 	}
 
 	/* Method: getRank(decade) */
