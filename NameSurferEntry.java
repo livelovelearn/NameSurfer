@@ -20,7 +20,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		int current;
+		
 		rank = new int[11];
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) != ' ') {
@@ -82,4 +82,5 @@ public class NameSurferEntry implements NameSurferConstants {
 
 	private String name = null;
 	private int[] rank;
+	private int current =0;
 }
