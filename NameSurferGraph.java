@@ -8,6 +8,7 @@
  */
 
 import acm.graphics.*;
+
 import java.awt.event.*;
 import java.util.*;
 import java.awt.*;
@@ -28,6 +29,9 @@ public class NameSurferGraph extends GCanvas
 	* Clears the list of name surfer entries stored inside this class.
 	*/
 	public void clear() {
+		removeAll();
+		GLabel wordlabel = new GLabel("start", getWidth()/2, getHeight()*0.9);
+		add (wordlabel);
 		// You fill this in //
 	}
 	
