@@ -41,8 +41,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		String cmd = e.getActionCommand();
 		NSE = NSD.findEntry(nameField.getText());
 		if (cmd.equals("Graph"))
-		{if (!NSE) 
-			println("invalid input")
+		{if (NSE==null) 
+			println("invalid input");
 			println("Name you entered " + NSE.toString());
 		}
 		if (cmd.equals("Clear"))
