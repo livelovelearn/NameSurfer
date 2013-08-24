@@ -11,6 +11,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 public class NameSurfer extends Program implements NameSurferConstants {
+	
 
 /* Method: init() */
 /**
@@ -26,6 +27,8 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		add(nameField, NORTH);
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
+		graph = new NameSurferGraph();
+		add(graph);
 		addActionListeners();
 	}
 
