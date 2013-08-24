@@ -26,8 +26,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		add(nameField, NORTH);
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
-		//NameSurferEntry NSE1 = new NameSurferEntry ("Ab 1 2 3 4 5 5 7 8 9 10 11");
-		//System.out.println(NSE1.toString());
 		addActionListeners();
 	}
 
@@ -43,6 +41,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		if (cmd.equals("Graph"))
 		{if (NSE==null) 
 			println("invalid input");
+		else 
 			println("Name you entered " + NSE.toString());
 		}
 		if (cmd.equals("Clear"))
