@@ -21,16 +21,15 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 */
 	public NameSurferGraph() {
 		addComponentListener(this);
-		
-		//update();
+
+		// update();
 	}
 
 	/**
 	 * Clears the list of name surfer entries stored inside this class.
 	 */
 	public void clear() {
-		removeAll();
-		addLines();		
+		update();
 	}
 
 	/* Method: addEntry(entry) */
@@ -40,11 +39,12 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * entry; the graph is drawn by calling update.
 	 */
 	public void addEntry(NameSurferEntry entry) {
-		
-		for (int i=0;i<11;i++){
-		GLabel name = new GLabel(entry.getName(), getWidth() / 11 * i+2 ,100);
-		add(name);
-		}		
+
+		for (int i = 0; i < 11; i++) {
+			GLabel name = new GLabel(entry.getName(), getWidth() / 11 * i + 2,
+					100);
+			add(name);
+		}
 	}
 
 	/**
@@ -54,31 +54,34 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * addEntry; update is also called whenever the size of the canvas changes.
 	 */
 	public void update() {
-		
-		}
+		removeAll();
+		addLines();
+	}
 
 	private void addLines() {
 		GLine[] line = new GLine[13];
 		for (int i = 0; i < 11; i++) {
 
-			line[i] = new GLine(getWidth()/ 11 * i, 0,
-					getWidth()/ 11 * i, getHeight());
+			line[i] = new GLine(getWidth() / 11 * i, 0, getWidth() / 11 * i,
+					getHeight());
 			add(line[i]);
 		}
 		line[11] = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(),
 				GRAPH_MARGIN_SIZE);
 		add(line[11]);
-		line[12] = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(),getHeight() - GRAPH_MARGIN_SIZE);
+		line[12] = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(),
+				getHeight() - GRAPH_MARGIN_SIZE);
 		add(line[12]);
-		
+
 		GLabel[] label = new GLabel[11];
 		for (int i = 0; i < 11; i++) {
-			String year = Integer.toString(1900+i*10);
-			label[i] = new GLabel(year, getWidth() / 11 * i+2, getHeight()-5);
+			String year = Integer.toString(1900 + i * 10);
+			label[i] = new GLabel(year, getWidth() / 11 * i + 2,
+					getHeight() - 5);
 			add(label[i]);
 		}
 	}
-	
+
 	/* Implementation of the ComponentListener interface */
 	public void componentHidden(ComponentEvent e) {
 	}
