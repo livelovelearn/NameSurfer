@@ -62,16 +62,16 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 					getWidth()/ 11 * i, getHeight());
 			add(line[i]);
 		}
-		line[11] = new GLine(0, GRAPH_MARGIN_SIZE, APPLICATION_WIDTH,
+		line[11] = new GLine(0, GRAPH_MARGIN_SIZE, getWidth(),
 				GRAPH_MARGIN_SIZE);
 		add(line[11]);
-		line[12] = new GLine(0, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE, APPLICATION_WIDTH, APPLICATION_HEIGHT - GRAPH_MARGIN_SIZE);
+		line[12] = new GLine(0, getHeight() - GRAPH_MARGIN_SIZE, getWidth(),getHeight() - GRAPH_MARGIN_SIZE);
 		add(line[12]);
 		
 		GLabel[] label = new GLabel[11];
 		for (int i = 0; i < 11; i++) {
 			String year = Integer.toString(1900+i*10);
-			label[i] = new GLabel(year, APPLICATION_WIDTH / 11 * i+2, APPLICATION_HEIGHT-5);
+			label[i] = new GLabel(year, getWidth() / 11 * i+2, getHeight()-5);
 			add(label[i]);
 		}
 	}
