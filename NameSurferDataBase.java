@@ -34,10 +34,11 @@ public class NameSurferDataBase implements NameSurferConstants {
 				String line = rd.readLine();
 				if (line == null)
 					break;
+				System.out.println("here");
 				NameSurferEntry entry = new NameSurferEntry(line);
 				pool.add(entry);
 			}
-			System.out.println("here");
+			
 			rd.close();
 		} catch (IOException ex) {
 			throw new ErrorException(ex);
