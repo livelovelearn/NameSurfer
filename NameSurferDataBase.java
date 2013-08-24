@@ -29,7 +29,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 				
 		try {
 			BufferedReader rd = getFileToRead(filename);
-
+System.out.println("here");
 			while (true) {
 				String line = rd.readLine();
 				if (line == null)
