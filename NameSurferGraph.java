@@ -30,8 +30,6 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 */
 	public void clear() {
 		
-
-		// You fill this in //
 	}
 
 	/* Method: addEntry(entry) */
@@ -41,6 +39,9 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * entry; the graph is drawn by calling update.
 	 */
 	public void addEntry(NameSurferEntry entry) {
+		
+		GLabel name = new GLabel(entry.getName(), 100,100);
+		add(name);
 		
 	}
 
@@ -76,7 +77,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			add(label[i]);
 		}
 	}
-
+	
 	/* Implementation of the ComponentListener interface */
 	public void componentHidden(ComponentEvent e) {
 	}
