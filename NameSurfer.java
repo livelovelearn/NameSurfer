@@ -29,10 +29,6 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		//NameSurferEntry NSE1 = new NameSurferEntry ("Ab 1 2 3 4 5 5 7 8 9 10 11");
 		//System.out.println(NSE1.toString());
 		addActionListeners();
-		
-		
-		
-		
 	}
 
 /* Method: actionPerformed(e) */
@@ -42,13 +38,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
-		
-		
 		String cmd = e.getActionCommand();
-		String name = nameField.getText();
 		NSE = NSD.findEntry(nameField.getText());
-		
-		
 		if (cmd.equals("Graph"))
 			println("Name you entered " + NSE.toString());
 		if (cmd.equals("Clear"))
