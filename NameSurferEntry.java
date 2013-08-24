@@ -11,72 +11,74 @@ import java.util.*;
 
 public class NameSurferEntry implements NameSurferConstants {
 
-/* Constructor: NameSurferEntry(line) */
-/**
- * Creates a new NameSurferEntry from a data line as it appears
- * in the data file.  Each line begins with the name, which is
- * followed by integers giving the rank of that name for each
- * decade.
- * 
- */
+	/* Constructor: NameSurferEntry(line) */
+	/**
+	 * Creates a new NameSurferEntry from a data line as it appears in the data
+	 * file. Each line begins with the name, which is followed by integers
+	 * giving the rank of that name for each decade.
+	 * 
+	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		int current=0;
+		int current = 0;
 		rank = new int[11];
-		for (int i=0;i<line.length();i++){
-			if (line.charAt(i)!= ' '){
+		for (int i = 0; i < line.length(); i++) {
+			if (line.charAt(i) != ' ') {
 				name += line.charAt(i);
-				current =i;
+			} else {
+				current = i;
+				break;
 			}
-			else break;
 		}
 		System.out.println("line position" + current);
-		for (int i=0;i<11;i++){
-			for(int j=current+1;j<line.length();j++){
-				if (line.charAt(j)!= ' '){
+		for (int i = 0; i < 11; i++) {
+			for (int j = current + 1; j < line.length(); j++) {
+				if (line.charAt(j) != ' ') {
 					String srank = null;
-					srank+= line.charAt(j);
-					rank[i]=Integer.parseInt(srank);
+					srank += line.charAt(j);
+					rank[i] = Integer.parseInt(srank);
+				} else {
 					current = j;
-					}
-				else break;
+					break;
+				}
 			}
 		}
 	}
 
-/* Method: getName() */
-/**
- * Returns the name associated with this entry.
- */
+	/* Method: getName() */
+	/**
+	 * Returns the name associated with this entry.
+	 */
 	public String getName() {
 		// You need to turn this stub into a real implementation //
 		return name;
 	}
 
-/* Method: getRank(decade) */
-/**
- * Returns the rank associated with an entry for a particular
- * decade.  The decade value is an integer indicating how many
- * decades have passed since the first year in the database,
- * which is given by the constant START_DECADE.  If a name does
- * not appear in a decade, the rank value is 0.
- */
+	/* Method: getRank(decade) */
+	/**
+	 * Returns the rank associated with an entry for a particular decade. The
+	 * decade value is an integer indicating how many decades have passed since
+	 * the first year in the database, which is given by the constant
+	 * START_DECADE. If a name does not appear in a decade, the rank value is 0.
+	 */
 	public int getRank(int decade) {
 		// You need to turn this stub into a real implementation //
-		int a = (decade-START_DECADE)/10;
+		int a = (decade - START_DECADE) / 10;
 		return rank[a];
 	}
-	 
-/* Method: toString() */
-/**
- * Returns a string that makes it easy to see the value of a
- * NameSurferEntry.
- */
+
+	/* Method: toString() */
+	/**
+	 * Returns a string that makes it easy to see the value of a
+	 * NameSurferEntry.
+	 */
 	public String toString() {
 		// You need to turn this stub into a real implementation //
-		return (name + " ["+ rank[0] +" "+ rank[1] +" "+ rank[2] +" "+ rank[3] +" "+ rank[4] +" "+ rank[5] +" "+ rank[6] +" "+ rank[7] +" "+ rank[8] +" "+ rank[9] +" "+ rank[10] +" ");
+		return (name + " [" + rank[0] + " " + rank[1] + " " + rank[2] + " "
+				+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
+				+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + " ");
 	}
-	private String name = null;
-	private int[] rank; 
-}
 
+	private String name = null;
+	private int[] rank;
+}
