@@ -19,27 +19,24 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * 
 	 */
 	public NameSurferEntry(String line) {
-		// You fill this in //
-		int current =0;
-		//rank = new int[11];
-		
+		int current = 0;
+		rank = new int[11];
+
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == ' ') {
 				current = i;
 				name = line.substring(0, i);
 				break;
 			}
-			}
-			
-		
-		
+		}
+
 		for (int i = 0; i < 11; i++) {
 			String srank = "";
 			System.out.println("line position" + current);
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
 					srank += line.charAt(j);
-					} else {
+				} else {
 					current = j;
 					rank[i] = Integer.parseInt(srank);
 					break;
@@ -56,7 +53,6 @@ public class NameSurferEntry implements NameSurferConstants {
 		// You need to turn this stub into a real implementation //
 		return name;
 	}
-	
 
 	/* Method: getRank(decade) */
 	/**
@@ -76,10 +72,10 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * Returns a string that makes it easy to see the value of a
 	 * NameSurferEntry.
 	 */
-	
+
 	public String toString() {
 		// You need to turn this stub into a real implementation //
-		
+
 		return (name + " [" + rank[0] + " " + rank[1] + " " + rank[2] + " "
 				+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
 				+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + " ");
@@ -87,5 +83,5 @@ public class NameSurferEntry implements NameSurferConstants {
 
 	private String name;
 	private int[] rank;
-	
+
 }
