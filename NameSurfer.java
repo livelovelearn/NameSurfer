@@ -39,6 +39,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
  * button actions.
  */
 	public void actionPerformed(ActionEvent e) {
+		graph.clear();
 		String cmd = e.getActionCommand();
 		NSE = NSD.findEntry(nameField.getText());
 		if (cmd.equals("Graph"))
