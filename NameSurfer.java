@@ -20,10 +20,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	
 	public void init() {
 	    // You fill this in, along with any helper methods //
+		
 		NSD = new NameSurferDataBase("names-data.txt");
-		NSE = NSD.findEntry(nameField.getText());
-		
-		
 		add(new JLabel("Name"), NORTH);
 		add(nameField, NORTH);
 		add(new JButton ("Graph"), NORTH);
@@ -31,6 +29,8 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 		
 		addActionListeners();
 		
+		
+		NSE = NSD.findEntry(nameField.getText());
 		
 		
 		
