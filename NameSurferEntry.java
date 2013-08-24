@@ -20,7 +20,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		
+		int current =0;
 		rank = new int[11];
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) != ' ') {
@@ -31,7 +31,7 @@ public class NameSurferEntry implements NameSurferConstants {
 			}
 		}
 		
-		for (int i = 0; i < 11; i++) {
+		/*for (int i = 0; i < 11; i++) {
 			String srank = null;
 			System.out.println("line position" + current);
 			for (int j = current + 1; j < line.length(); j++) {
@@ -43,7 +43,7 @@ public class NameSurferEntry implements NameSurferConstants {
 					break;
 				}
 			}
-		}
+		}*/
 	}
 
 	/* Method: getName() */
@@ -62,7 +62,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * the first year in the database, which is given by the constant
 	 * START_DECADE. If a name does not appear in a decade, the rank value is 0.
 	 */
-	public int getRank(int decade) {
+	/*public int getRank(int decade) {
 		// You need to turn this stub into a real implementation //
 		int a = (decade - START_DECADE) / 10;
 		return rank[a];
@@ -79,8 +79,8 @@ public class NameSurferEntry implements NameSurferConstants {
 				+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
 				+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + " ");
 	}
-
+*/
 	private String name = null;
 	private int[] rank;
-	private int current =0;
+	
 }
