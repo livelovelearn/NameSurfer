@@ -28,7 +28,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * Clears the list of name surfer entries stored inside this class.
 	 */
 	public void clear() {
-		removeAll();
+		
 
 		// You fill this in //
 	}
@@ -50,6 +50,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * addEntry; update is also called whenever the size of the canvas changes.
 	 */
 	public void update() {
+		removeAll();
 
 		addLines();
 
