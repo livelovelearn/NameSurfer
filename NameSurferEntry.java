@@ -20,17 +20,17 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		//int current =0;
+		int current =0;
 		//rank = new int[11];
-		name ="here2";
-		/*for (int i = 0; i < line.length(); i++) {
+		
+		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == 'b') {
 				current = i;
 				name = line.substring(0, i);
 				break;
 			}
 			}
-			*/
+			
 		
 		
 		/*for (int i = 0; i < 11; i++) {
