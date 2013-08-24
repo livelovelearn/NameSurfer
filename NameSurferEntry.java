@@ -32,13 +32,13 @@ public class NameSurferEntry implements NameSurferConstants {
 		}
 		System.out.println("line position" + current);
 		for (int i = 0; i < 11; i++) {
+			String srank = null;
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
-					String srank = null;
 					srank += line.charAt(j);
-					rank[i] = Integer.parseInt(srank);
-				} else {
+					} else {
 					current = j;
+					rank[i] = Integer.parseInt(srank);
 					break;
 				}
 			}
