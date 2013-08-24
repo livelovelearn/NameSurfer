@@ -22,6 +22,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public NameSurferGraph() {
 		addComponentListener(this);
 		// You fill in the rest //
+		update();
 	}
 
 	/**
