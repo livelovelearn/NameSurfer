@@ -34,7 +34,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 				String line = rd.readLine();
 				if (line == null)
 					break;
-				System.out.println("here");
+				System.out.println(line);
 				NameSurferEntry entry = new NameSurferEntry(line);
 				pool.add(entry);
 			}
