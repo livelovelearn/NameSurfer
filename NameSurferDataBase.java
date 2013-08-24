@@ -75,4 +75,5 @@ public class NameSurferDataBase implements NameSurferConstants {
 		return rd;
 	}
 	ArrayList<NameSurferEntry> pool = new ArrayList<NameSurferEntry>();
+	
 }
