@@ -30,7 +30,7 @@ public class NameSurferEntry implements NameSurferConstants {
 			}
 		}
 
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 10; i++) {
 			String srank = "";
 			System.out.println("line position1" + current);
 			for (int j = current + 1; j < line.length(); j++) {
@@ -43,6 +43,7 @@ public class NameSurferEntry implements NameSurferConstants {
 				}
 			}
 		}
+		rank[10] = Integer.parseInt(line.substring(current+1));
 	}
 
 	/* Method: getName() */
