@@ -29,7 +29,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		add(new JButton ("Clear"), NORTH);
 		graph = new NameSurferGraph();
 		add(graph);
-		graph.update();
+		//graph.update();
 		addActionListeners();
 		
 	}
