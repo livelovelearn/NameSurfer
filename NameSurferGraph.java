@@ -42,7 +42,8 @@ public class NameSurferGraph extends GCanvas
 	* simply stores the entry; the graph is drawn by calling update.
 	*/
 	public void addEntry(NameSurferEntry entry) {
-		// You fill this in //
+		GLabel wordlabel = new GLabel("start", 100, 100);
+		add (wordlabel);
 	}
 	
 	
@@ -54,14 +55,16 @@ public class NameSurferGraph extends GCanvas
 	* the size of the canvas changes.
 	*/
 	public void update() {
-		// You fill this in //
-		GLabel wordlabel = new GLabel("start", 100, 100);
-		add (wordlabel);
-		GLine line1 = new GLine(0,0, 0, APPLICATION_WIDTH);
-		add(line1);
+		
+		addLines();
 		
 	}
 	
+	private void addLines(){
+		GLine line1 = new GLine(0,0, 0, APPLICATION_HEIGHT);
+		GLine line1 = new GLine(APPLICATION_WIDTH/10,0, APPLICATION_WIDTH/10, APPLICATION_HEIGHT);
+		add(line1);
+	}
 	
 	/* Implementation of the ComponentListener interface */
 	public void componentHidden(ComponentEvent e) { }
