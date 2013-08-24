@@ -24,7 +24,8 @@ public class NameSurferEntry implements NameSurferConstants {
 		rank = new int[11];
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) != ' ') {
-				name += line.charAt(i);
+				char x= line.charAt(i);
+				name += x;
 			} else {
 				current = i;
 				break;
