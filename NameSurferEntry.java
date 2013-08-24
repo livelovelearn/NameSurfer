@@ -20,8 +20,8 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		// You fill this in //
-		int current =0;
-		rank = new int[11];
+		//int current =0;
+		//rank = new int[11];
 		name ="here2";
 		/*for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == 'b') {
@@ -54,7 +54,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public String getName() {
 		// You need to turn this stub into a real implementation //
-		return null;
+		return name;
 	}
 
 	/* Method: getRank(decade) */
