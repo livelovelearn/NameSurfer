@@ -21,13 +21,13 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	public void init() {
 	    // You fill this in, along with any helper methods //
 		
-		//NSD = new NameSurferDataBase("names-data.txt");
+		NSD = new NameSurferDataBase("names-data.txt");
 		add(new JLabel("Name"), NORTH);
 		add(nameField, NORTH);
 		add(new JButton ("Graph"), NORTH);
 		add(new JButton ("Clear"), NORTH);
-		NameSurferEntry NSE1 = new NameSurferEntry ("Ab 1 2 3 4 5 5 7 8 9 10 11");
-		System.out.println(NSE1.toString());
+		//NameSurferEntry NSE1 = new NameSurferEntry ("Ab 1 2 3 4 5 5 7 8 9 10 11");
+		//System.out.println(NSE1.toString());
 		addActionListeners();
 		
 		
