@@ -21,7 +21,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 	public void init() {
 	    // You fill this in, along with any helper methods //
 		
-		NSD = new NameSurferDataBase("1.txt");
+		NSD = new NameSurferDataBase("names-data.txt");
 		add(new JLabel("Name"), NORTH);
 		add(nameField, NORTH);
 		add(new JButton ("Graph"), NORTH);
