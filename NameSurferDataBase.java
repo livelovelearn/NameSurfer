@@ -68,6 +68,7 @@ public class NameSurferDataBase implements NameSurferConstants {
 				rd = new BufferedReader(new FileReader(filename));
 			} catch (IOException ex) {
 				System.out.println("Can't open that file.");
+				break;
 			}
 		}
 		return rd;
