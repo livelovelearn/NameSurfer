@@ -39,29 +39,33 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 */
 	public void addEntry(NameSurferEntry entry) {
 
-	Color color=Color.black;
-	switch (colorCount++%4){
-	case 0: color = Color.black;
-	break;
-	case 1: color = Color.RED;
-	break;
-	case 2: color = Color.blue;
-	break;
-	case 3: color = Color.magenta;
-	
-	}
+		Color color = Color.black;
+		switch (colorCount++ % 4) {
+		case 0:
+			color = Color.black;
+			break;
+		case 1:
+			color = Color.RED;
+			break;
+		case 2:
+			color = Color.blue;
+			break;
+		case 3:
+			color = Color.magenta;
 
-		for (int i = 0; i < 11; i++) {
+		}
+
+		for (int i = 0; i < NDECADES; i++) {
 			int rank = entry.getRank(1900 + i * 10);
 			GLabel name;
 			if (rank != 0) {
 				name = new GLabel(entry.getName() + Integer.toString(rank),
-						getWidth() / 11 * i + 2, rank / 1000.0
+						getWidth() / NDECADES * i + 2, rank / 1000.0
 								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
 								+ GRAPH_MARGIN_SIZE);
 			} else {
 				rank = 1000;
-				name = new GLabel(entry.getName() + "*", getWidth() / 11 * i
+				name = new GLabel(entry.getName() + "*", getWidth() / NDECADES * i
 						+ 2, getHeight() - GRAPH_MARGIN_SIZE);
 			}
 			name.setColor(color);
@@ -71,9 +75,9 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 				if (nextRank == 0) {
 					nextRank = 1000;
 				}
-				GLine line = new GLine(getWidth() / 11 * i + 2, rank / 1000.0
+				GLine line = new GLine(getWidth() / NDECADES * i + 2, rank / 1000.0
 						* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
-						+ GRAPH_MARGIN_SIZE, getWidth() / 11 * (i + 1) + 2,
+						+ GRAPH_MARGIN_SIZE, getWidth() / NDECADES * (i + 1) + 2,
 						nextRank / 1000.0
 								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
 								+ GRAPH_MARGIN_SIZE);
@@ -96,10 +100,10 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	}
 
 	private void addLines() {
-		GLine[] line = new GLine[13];
-		for (int i = 0; i < 11; i++) {
+		GLine[] line = new GLine[NDECADES+2];
+		for (int i = 0; i < NDECADES; i++) {
 
-			line[i] = new GLine(getWidth() / 11 * i, 0, getWidth() / 11 * i,
+			line[i] = new GLine(getWidth() / NDECADES * i, 0, getWidth() / NDECADES * i,
 					getHeight());
 			add(line[i]);
 		}
@@ -111,9 +115,9 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		add(line[12]);
 
 		GLabel[] label = new GLabel[11];
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < NDECADES; i++) {
 			String year = Integer.toString(1900 + i * 10);
-			label[i] = new GLabel(year, getWidth() / 11 * i + 2,
+			label[i] = new GLabel(year, getWidth() / NDECADES * i + 2,
 					getHeight() - 5);
 			add(label[i]);
 		}
