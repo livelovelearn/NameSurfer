@@ -39,7 +39,17 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 */
 	public void addEntry(NameSurferEntry entry) {
 
-		
+	Color color=Color.black;
+	switch (colorCount++%4){
+	case 0: color = Color.black;
+	break;
+	case 1: color = Color.RED;
+	break;
+	case 2: color = Color.blue;
+	break;
+	case 3: color = Color.magenta;
+	
+	}
 
 		for (int i = 0; i < 11; i++) {
 			int rank = entry.getRank(1900 + i * 10);
@@ -54,7 +64,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 				name = new GLabel(entry.getName() + "*", getWidth() / 11 * i
 						+ 2, getHeight() - GRAPH_MARGIN_SIZE);
 			}
-			name.setColor(Color.RED);
+			name.setColor(color);
 			add(name);
 			if (i < 10) {
 				int nextRank = entry.getRank(1900 + (i + 1) * 10);
@@ -67,7 +77,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 						nextRank / 1000.0
 								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
 								+ GRAPH_MARGIN_SIZE);
-				line.setColor(Color.BLUE);
+				line.setColor(color);
 				add(line);
 			}
 		}
@@ -109,7 +119,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		}
 	}
 
-	private int color;
+	private int colorCount;
 	private NameSurferEntry entry;
 
 	/* Implementation of the ComponentListener interface */
