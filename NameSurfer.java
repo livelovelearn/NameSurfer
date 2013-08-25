@@ -10,7 +10,7 @@ import acm.program.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class NameSurfer extends Program implements NameSurferConstants {
+public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
 	/* Method: init() */
 	/**
@@ -43,6 +43,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		String cmd = e.getActionCommand();
 
 		if (e.getSource()==nameField){
+			println(nameField.getText());
 			NSE = NSD.findEntry(nameField.getText());
 			if (NSE != null)
 				graph.addEntry(NSE);
