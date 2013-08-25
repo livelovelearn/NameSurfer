@@ -20,7 +20,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 	public NameSurferEntry(String line) {
 		int current = 0;
-		rank = new int[11];
+		rank = new int[NDECADES];
 
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == ' ') {
@@ -30,7 +30,7 @@ public class NameSurferEntry implements NameSurferConstants {
 			}
 		}
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < NDECADES-1; i++) {
 			String srank = "";
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
@@ -42,7 +42,7 @@ public class NameSurferEntry implements NameSurferConstants {
 				}
 			}
 		}
-		rank[10] = Integer.parseInt(line.substring(current+1));
+		rank[NDECADES-1] = Integer.parseInt(line.substring(current+1));
 	}
 
 	/* Method: getName() */
@@ -74,10 +74,14 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 
 	public String toString() {
-			return (name + " [" + rank[0] + " " + rank[1] + " " + rank[2] + " "
-				+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
-				+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + "]");
-	}
+		String a = name + " [" ;
+		for (int i =0; i< NDECADES; i++){
+			a = a + " " + rank[i];}
+		
+			//	+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
+			//	+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + "]");
+			 return (a + "]");
+			 }
 
 	private String name;
 	private int[] rank;
