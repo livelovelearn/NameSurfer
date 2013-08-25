@@ -46,7 +46,6 @@ public class NameSurfer extends Program implements NameSurferConstants {
 			NSE = NSD.findEntry(nameField.getText());
 			if (NSE != null)
 				graph.addEntry(NSE);
-
 		}
 		if (cmd.equals("Clear"))
 			graph.clear();
