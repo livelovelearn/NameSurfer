@@ -39,20 +39,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 */
 	public void addEntry(NameSurferEntry entry) {
 
-		switch (color++ % 4) {
-		case 0:
-			
-			break;
-		case 1:
-			rect.setFillColor(Color.RED);
-			break;
-		case 2:
-			rect.setFillColor(Color.ORANGE);
-			break;
-		case 3:
-			rect.setFillColor(Color.ORANGE);
-			break;
-		}
+		
 
 		for (int i = 0; i < 11; i++) {
 			int rank = entry.getRank(1900 + i * 10);
