@@ -67,7 +67,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 						nextRank / 1000.0
 								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
 								+ GRAPH_MARGIN_SIZE);
-				name.setColor(Color.BLACK);
+				name.setColor(Color.BLUE);
 				add(line);
 			}
 		}
