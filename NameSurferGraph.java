@@ -87,7 +87,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		for (int i = 0; i < 11; i++) {
 			String year = Integer.toString(1900 + i * 10);
 			label[i] = new GLabel(year, getWidth() / 11 * i + 2,
-					getHeight() - 5);
+					getHeight());
 			add(label[i]);
 		}
 	}
