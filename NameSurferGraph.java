@@ -38,39 +38,42 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * entry; the graph is drawn by calling update.
 	 */
 	public void addEntry(NameSurferEntry entry) {
-		
-		/*switch (color++%4){
-					case 0: rect.setFillColor(Color.RED);
-					break;
-					case 1: rect.setFillColor(Color.RED);
-					break;
-					case 2: rect.setFillColor(Color.ORANGE);
-					break;
-					case 3: rect.setFillColor(Color.ORANGE);
-					break;
-					}*/
-		
+
+		/*
+		 * switch (color++%4){ case 0: rect.setFillColor(Color.RED); break; case
+		 * 1: rect.setFillColor(Color.RED); break; case 2:
+		 * rect.setFillColor(Color.ORANGE); break; case 3:
+		 * rect.setFillColor(Color.ORANGE); break; }
+		 */
+
 		for (int i = 0; i < 11; i++) {
-			int rank = entry.getRank(1900+i*10);
+			int rank = entry.getRank(1900 + i * 10);
 			GLabel name;
-			if (rank !=0){
-			name= new GLabel(entry.getName()+Integer.toString(rank), getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-2*GRAPH_MARGIN_SIZE)+ GRAPH_MARGIN_SIZE);
-			}
-			else {
-				rank=1000;
-			name= new GLabel(entry.getName()+"*", getWidth() / 11 * i + 2, getHeight()-GRAPH_MARGIN_SIZE);
+			if (rank != 0) {
+				name = new GLabel(entry.getName() + Integer.toString(rank),
+						getWidth() / 11 * i + 2, rank / 1000.0
+								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
+								+ GRAPH_MARGIN_SIZE);
+			} else {
+				rank = 1000;
+				name = new GLabel(entry.getName() + "*", getWidth() / 11 * i
+						+ 2, getHeight() - GRAPH_MARGIN_SIZE);
 			}
 			add(name);
-			if(i<10){
-				int nextRank = entry.getRank(1900+(i+1)*10);
-				if (nextRank == 0){
-					nextRank =1000;}
-				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-2*GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE,getWidth() / 11 *(i+1) + 2, nextRank/1000.0*(getHeight()-2*GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE);
+			if (i < 10) {
+				int nextRank = entry.getRank(1900 + (i + 1) * 10);
+				if (nextRank == 0) {
+					nextRank = 1000;
+				}
+				GLine line = new GLine(getWidth() / 11 * i + 2, rank / 1000.0
+						* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
+						+ GRAPH_MARGIN_SIZE, getWidth() / 11 * (i + 1) + 2,
+						nextRank / 1000.0
+								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
+								+ GRAPH_MARGIN_SIZE);
 				add(line);
 			}
 		}
-		
-		
 	}
 
 	/**
@@ -82,6 +85,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public void update() {
 		removeAll();
 		addLines();
+		addEntry(entry);
 		}
 
 	private void addLines() {
@@ -103,12 +107,15 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		for (int i = 0; i < 11; i++) {
 			String year = Integer.toString(1900 + i * 10);
 			label[i] = new GLabel(year, getWidth() / 11 * i + 2,
-					getHeight()-5);
+					getHeight() - 5);
 			add(label[i]);
 		}
 	}
 
-	private int color;/* Implementation of the ComponentListener interface */
+	private int color;
+	private NameSurferEntry entry;
+	/* Implementation of the ComponentListener interface */
+
 	public void componentHidden(ComponentEvent e) {
 	}
 
