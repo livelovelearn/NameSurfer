@@ -54,7 +54,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			int rank = entry.getRank(1900+i*10);
 			GLabel name;
 			if (rank !=0){
-			name= new GLabel(entry.getName()+Integer.toString(rank), getWidth() / 11 * i + 2, rank/1000.0*getHeight());
+			name= new GLabel(entry.getName()+Integer.toString(rank), getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-GRAPH_MARGIN_SIZE)+ GRAPH_MARGIN_SIZE);
 			}
 			else {
 				rank=1000;
@@ -65,7 +65,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 				int nextRank = entry.getRank(1900+(i+1)*10);
 				if (nextRank == 0){
 					nextRank =1000;}
-				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*getHeight(),getWidth() / 11 *(i+1) + 2, nextRank/1000.0*getHeight());
+				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE,getWidth() / 11 *(i+1) + 2, nextRank/1000.0*(getHeight()-GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE);
 				add(line);
 			}
 		}
