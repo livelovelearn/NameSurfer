@@ -30,7 +30,7 @@ public class NameSurferEntry implements NameSurferConstants {
 			}
 		}
 
-		for (int i = 0; i < NDECADES-1; i++) {
+		for (int i = 0; i < NDECADES - 1; i++) {
 			String srank = "";
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
@@ -42,7 +42,7 @@ public class NameSurferEntry implements NameSurferConstants {
 				}
 			}
 		}
-		rank[NDECADES-1] = Integer.parseInt(line.substring(current+1));
+		rank[NDECADES - 1] = Integer.parseInt(line.substring(current + 1));
 	}
 
 	/* Method: getName() */
@@ -74,14 +74,12 @@ public class NameSurferEntry implements NameSurferConstants {
 	 */
 
 	public String toString() {
-		String a = name + " [" ;
-		for (int i =0; i< NDECADES; i++){
-			a = a + " " + rank[i];}
-		
-			//	+ rank[3] + " " + rank[4] + " " + rank[5] + " " + rank[6] + " "
-			//	+ rank[7] + " " + rank[8] + " " + rank[9] + " " + rank[10] + "]");
-			 return (a + "]");
-			 }
+		String a = name + " [";
+		for (int i = 0; i < NDECADES; i++) {
+			a = a + " " + rank[i];
+		}
+		return (a + "]");
+	}
 
 	private String name;
 	private int[] rank;
