@@ -53,7 +53,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 		for (int i = 0; i < 11; i++) {
 			int rank = entry.getRank(1900+i*10);
 			GLabel name = new GLabel(entry.getName()+Integer.toString(rank), getWidth() / 11 * i + 2,
-					rank/1000*getHeight());
+					100);//rank/1000*getHeight());
 			add(name);
 		}
 	}
