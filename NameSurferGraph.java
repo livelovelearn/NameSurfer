@@ -71,7 +71,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			name.setColor(color);
 			add(name);
 			if (i < 10) {
-				int nextRank = entry.getRank(1900 + (i + 1) * 10);
+				int nextRank = entry.getRank(START_DECADE+ (i + 1) * 10);
 				if (nextRank == 0) {
 					nextRank = 1000;
 				}
@@ -116,7 +116,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 
 		GLabel[] label = new GLabel[11];
 		for (int i = 0; i < NDECADES; i++) {
-			String year = Integer.toString(1900 + i * 10);
+			String year = Integer.toString(START_DECADE+ i * 10);
 			label[i] = new GLabel(year, getWidth() / NDECADES * i + 2,
 					getHeight() - 5);
 			add(label[i]);
