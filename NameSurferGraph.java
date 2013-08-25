@@ -62,7 +62,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			}
 			add(name);
 			if(i<10){
-				int nextRank = (entry.getRank(1900+i*10)+1001)%1000;
+				int nextRank = (entry.getRank(1900+(i+1)*10)+1001)%1000;
 				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*getHeight(),getWidth() / 11 *(i+1) + 2, nextRank/1000.0*getHeight());
 				add(line);
 			}
