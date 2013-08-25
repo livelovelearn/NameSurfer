@@ -19,8 +19,6 @@ public class NameSurfer extends Program implements NameSurferConstants {
 	 */
 
 	public void init() {
-		// You fill this in, along with any helper methods //
-
 		NSD = new NameSurferDataBase(NAMES_DATA_FILE);
 		add(new JLabel("Name"), NORTH);
 		nameField = new JTextField(20);
@@ -29,9 +27,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		add(new JButton("Clear"), NORTH);
 		graph = new NameSurferGraph();
 		add(graph);
-		// graph.update();
 		addActionListeners();
-
 	}
 
 	/* Method: actionPerformed(e) */
@@ -43,7 +39,7 @@ public class NameSurfer extends Program implements NameSurferConstants {
 
 		String cmd = e.getActionCommand();
 
-		if (e.getSource()==nameField){
+		if (e.getSource()== nameField){
 			//println(nameField.getText());
 			NSE = NSD.findEntry(nameField.getText());
 			if (NSE != null)
