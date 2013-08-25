@@ -49,7 +49,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 					case 3: rect.setFillColor(Color.ORANGE);
 					break;
 					}*/
-
+		
 		for (int i = 0; i < 11; i++) {
 			int rank = entry.getRank(1900+i*10);
 			GLabel name;
@@ -60,7 +60,13 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			name= new GLabel(entry.getName()+"*", getWidth() / 11 * i + 2, getHeight()-GRAPH_MARGIN_SIZE);
 			}
 			add(name);
+			if(i<10){
+				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*getHeight(),getWidth() / 11 *(i+1) + 2, entry.getRank(1900+(i+1)*10)/1000.0*getHeight());
+				add(line);
+			}
 		}
+		
+		
 	}
 
 	/**
@@ -72,7 +78,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public void update() {
 		removeAll();
 		addLines();
-	}
+		}
 
 	private void addLines() {
 		GLine[] line = new GLine[13];
