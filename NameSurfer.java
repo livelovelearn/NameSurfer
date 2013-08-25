@@ -23,6 +23,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 
 		NSD = new NameSurferDataBase(NAMES_DATA_FILE);
 		add(new JLabel("Name"), NORTH);
+		nameField = new JTextField(20);
 		add(nameField, NORTH);
 		add(new JButton("Graph"), NORTH);
 		add(new JButton("Clear"), NORTH);
@@ -57,7 +58,7 @@ public class NameSurfer extends ConsoleProgram implements NameSurferConstants {
 			graph.clear();
 	}
 
-	private JTextField nameField = new JTextField(20);
+	private JTextField nameField;
 	private NameSurferDataBase NSD;
 	private NameSurferEntry NSE;
 	private NameSurferGraph graph;
