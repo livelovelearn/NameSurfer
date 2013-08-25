@@ -65,7 +65,7 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 				int nextRank = entry.getRank(1900+(i+1)*10);
 				if (nextRank == 0){
 					nextRank =1000;}
-				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE,getWidth() / 11 *(i+1) + 2, nextRank/1000.0*(getHeight()-GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE);
+				GLine line = new GLine(getWidth() / 11 * i + 2, rank/1000.0*(getHeight()-2*GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE,getWidth() / 11 *(i+1) + 2, nextRank/1000.0*(getHeight()-2*GRAPH_MARGIN_SIZE)+GRAPH_MARGIN_SIZE);
 				add(line);
 			}
 		}
