@@ -19,8 +19,8 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * 
 	 */
 	public NameSurferEntry(String line) {
-		int current = 0;
-		rank = new int[NDECADES];
+		int current = 0; // track the index of the line containing both name and ranks
+		rank = new int[NDECADES]; // 
 
 		for (int i = 0; i < line.length(); i++) {
 			if (line.charAt(i) == ' ') {
