@@ -2,9 +2,7 @@
  * File: NameSurferGraph.java
  * ---------------------------
  * This class represents the canvas on which the graph of
- * names is drawn. This class is responsible for updating
- * (redrawing) the graphs whenever the list of entries changes
- * or the window is resized.
+ * names is drawn. 
  */
 
 import acm.graphics.*;
@@ -40,6 +38,8 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	public void addEntry(NameSurferEntry entry) {
 
 		Color color = Color.black;
+		
+		/* multiple entries will have different colors */
 		switch (colorCount++ % 4) {
 		case 0:
 			color = Color.black;
@@ -54,6 +54,9 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 			color = Color.magenta;
 
 		}
+		/*
+		based on the ranks, calculated a series of position where name and plot should be placed
+		*/
 
 		for (int i = 0; i < NDECADES; i++) {
 			int rank = entry.getRank(1900 + i * 10);
@@ -63,13 +66,20 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 						getWidth() / NDECADES * i + 2, rank / 1000.0
 								* (getHeight() - 2 * GRAPH_MARGIN_SIZE)
 								+ GRAPH_MARGIN_SIZE);
-			} else {
+			}
+			/*
+			if the input of name is not present in the most popular 1000 names, placed it as 1000th and marked with '*'
+			*/
+			else {
 				rank = 1000;
 				name = new GLabel(entry.getName() + "*", getWidth() / NDECADES * i
 						+ 2, getHeight() - GRAPH_MARGIN_SIZE);
 			}
 			name.setColor(color);
 			add(name);
+			
+			/* add curve for the plot*/
+			
 			if (i < 10) {
 				int nextRank = entry.getRank(START_DECADE+ (i + 1) * 10);
 				if (nextRank == 0) {
@@ -91,13 +101,14 @@ public class NameSurferGraph extends GCanvas implements NameSurferConstants,
 	 * Updates the display image by deleting all the graphical objects from the
 	 * canvas and then reassembling the display according to the list of
 	 * entries. Your application must call update after calling either clear or
-	 * addEntry; update is also called whenever the size of the canvas changes.
+	 * addEntry; 
 	 */
 	public void update() {
 		removeAll();
 		addLines();
-		// addEntry(entry);
-	}
+		}
+		
+	/* initiation by adding all scaffolding elements*/
 
 	private void addLines() {
 		GLine[] line = new GLine[NDECADES+2];
