@@ -1,9 +1,5 @@
 /*
- * File: NameSurfer.java
-
- * ---------------------
- * When it is finished, this program will implements the viewer for
- * the baby-name database described in the assignment handout.
+ This program implements the viewer for the baby-name database 
  */
 
 import acm.program.*;
@@ -20,14 +16,14 @@ public class NameSurfer extends Program implements NameSurferConstants {
 
 	public void init() {
 		NSD = new NameSurferDataBase(NAMES_DATA_FILE);
-		add(new JLabel("Name"), NORTH);
-		nameField = new JTextField(20);
+		add(new JLabel("Name"), NORTH); // add labe "name"
+		nameField = new JTextField(20); // add text field for user input
 		add(nameField, NORTH);
-		add(new JButton("Graph"), NORTH);
-		add(new JButton("Clear"), NORTH);
+		add(new JButton("Graph"), NORTH); // add button "Graph"
+		add(new JButton("Clear"), NORTH); // add button "Clear"
 		graph = new NameSurferGraph();
-		add(graph);
-		addActionListeners();
+		add(graph);		// add to canvas for display
+		addActionListeners(); // wait for user response
 	}
 
 	/* Method: actionPerformed(e) */
@@ -40,7 +36,6 @@ public class NameSurfer extends Program implements NameSurferConstants {
 		String cmd = e.getActionCommand();
 
 		if (e.getSource()== nameField){
-			//println(nameField.getText());
 			NSE = NSD.findEntry(nameField.getText());
 			if (NSE != null)
 				graph.addEntry(NSE);
