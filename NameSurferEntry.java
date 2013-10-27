@@ -19,10 +19,10 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * 
 	 */
 	public NameSurferEntry(String line) {
-		int current = 0; // track the index of the line containing both name and ranks
-		rank = new int[NDECADES]; // 
+		int current = 0; // track the index position of the data line 
+		rank = new int[NDECADES]; // an interger array to record ranks data
 
-		for (int i = 0; i < line.length(); i++) {
+		for (int i = 0; i < line.length(); i++) { // parsing name from the data line
 			if (line.charAt(i) == ' ') {
 				current = i;
 				name = line.substring(0, i);
@@ -34,7 +34,7 @@ public class NameSurferEntry implements NameSurferConstants {
 			String srank = "";
 			for (int j = current + 1; j < line.length(); j++) {
 				if (line.charAt(j) != ' ') {
-					srank += line.charAt(j);
+					srank += line.charAt(j); // parsing ranks from the data line
 				} else {
 					current = j;
 					rank[i] = Integer.parseInt(srank);
@@ -50,7 +50,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * Returns the name associated with this entry.
 	 */
 	public String getName() {
-		// You need to turn this stub into a real implementation //
+		
 		return name;
 	}
 
@@ -62,7 +62,7 @@ public class NameSurferEntry implements NameSurferConstants {
 	 * START_DECADE. If a name does not appear in a decade, the rank value is 0.
 	 */
 	public int getRank(int decade) {
-		// You need to turn this stub into a real implementation //
+		
 		int a = (decade - START_DECADE) / 10;
 		return rank[a];
 	}
